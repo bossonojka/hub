@@ -13,14 +13,14 @@ request.onload = function(){
 }
 function populateHeader(jsonObj) {
     var myH1 = document.createElement('h1');
-    myH1.textContent = jsonObj['squadName'];
+    myH1.textContent = jsonObj.squadName;
     header.appendChild(myH1);
     var myPara = document.createElement('p');
-    myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+    myPara.textContent = 'Hometown: ' + jsonObj.homeTown + ' // Formed: ' + jsonObj.formed;
     header.appendChild(myPara);
 }
 function showHeroes(jsonObj) {
-    var heroes = jsonObj['members'];
+    var heroes = jsonObj.members;
     for(i = 0; i < heroes.length; i++) {
         var myArticle = document.createElement('article');
         var myH2 = document.createElement('h2');
