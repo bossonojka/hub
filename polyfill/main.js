@@ -1,8 +1,7 @@
 if (checkBrowser()){
     main();
 } else {
-    loadPolyfill("es6-promise.js");
-    loadPolyfill("fetch.js");
+    loadPolyfill("fetchAndPromise.js");
 }
 
 function loadPolyfill(src){
