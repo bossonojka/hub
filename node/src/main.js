@@ -6,3 +6,11 @@ array.forEach((e, i, a) => {
    elem.textContent = (i + 1) + '. ' + e;
    document.body.appendChild(elem);
 });
+
+fetch('style.css').then(response => {
+    return response.text().then((text) => {
+        let para = document.createElement("p");
+        para.textContent = text;
+        document.body.appendChild(para);
+    })
+});
