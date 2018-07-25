@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bossonojka/hub/issues"
   },
-  "homepage": "https://github.com/bossonojka/hub#readme"
+  "homepage": "https://github.com/bossonojka/hub#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3"
+  }
 }
