@@ -1,0 +1,19 @@
+{
+  "name": "hub",
+  "version": "1.0.0",
+  "description": "Hub repository based on npm project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bossonojka/hub.git"
+  },
+  "author": "Vladimir Kulik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bossonojka/hub/issues"
+  },
+  "homepage": "https://github.com/bossonojka/hub#readme"
+}
