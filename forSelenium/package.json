@@ -1,0 +1,14 @@
+{
+  "name": "forselenium",
+  "version": "1.0.0",
+  "description": "Project for Selenium automation tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Vladimir Kulik",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
