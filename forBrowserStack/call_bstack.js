@@ -10,4 +10,24 @@ function getPlanDetails(){
     });
 }
 
+function getBuilds(){
+    request({uri: baseUrl + "builds.json"}, function(err, res, body){
+        console.log(JSON.parse(body));
+    });
+}
+
+function getSessionsInBuild(build){
+	var buildId = build.automation_build.hashed_id;
+	request({uri: baseUrl + "builds/" + buildId + "/sessions.json"}, function(err, res, body){
+		console.log(JSON.parse(body));
+    });
+}
+    
+function getSessionDetails(session){
+    var sessionId = session.automation_session.hashed_id;
+    request({uri: baseUrl + "sessions/" + sessionId + ".json"}, function(err, res, body){
+        console.log(JSON.parse(body));
+    });
+}
+
 getPlanDetails();
