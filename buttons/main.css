@@ -1,0 +1,10 @@
+#btn{
+    background-color: tomato;
+    color: white;
+    width: 80px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#btn:focus{
+    border: black solid 2px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "forbrowserstack",
+  "version": "1.0.0",
+  "description": "Project for running tasks and testing with BrowserStack",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Vladimir Kulik",
+  "license": "ISC",
+  "devDependencies": {
+    "request": "^2.87.0"
+  }
+}

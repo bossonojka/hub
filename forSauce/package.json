@@ -1,0 +1,15 @@
+{
+  "name": "forsauce",
+  "version": "1.0.0",
+  "description": "Using saucelabs in npm project",
+  "main": "index.js",
+  "dependencies": {
+    "saucelabs": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Vladimir Kulik",
+  "license": "ISC"
+}
