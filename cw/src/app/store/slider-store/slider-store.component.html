@@ -1,0 +1,51 @@
+<div class="slider">
+    <div class="wrapper">
+        <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let i of products">
+                <div class="slider-conteiner">
+                    <div class="slider-foto">
+                        <a href="#"> <img src="{{i.url}}"> </a>
+                    </div>
+                    <div class="slider-content">
+                        <h2> {{i.name}} <br> {{i.firm}}</h2>
+                        <p class="slider-price"> {{i.price}}</p>
+                        <p> {{i.specifications}}.</p>
+                        <button mat-button (click)="addProductToCart(i)"> Купить</button>
+                    </div>
+                </div>
+            </ng-template>
+            <!--<ng-template ngbSlide>-->
+                <!--<div class=" slider-conteiner">-->
+                        <!--<div class="slider-foto">-->
+                        <!--<a href="#"> <img src="/assets/img/slider-foto1.png"> </a>-->
+                        <!--</div>-->
+                        <!--<div class="slider-content">-->
+                        <!--<h2> Adidas <br> Super Star</h2>-->
+                        <!--<p> Кроссовки Superstar были представлены в 1969 году в качестве обуви для баскетбола,-->
+                        <!--но модель быстро завоевала популярность среди поклонников уличного стиля. Современная-->
+                        <!--интерпретация сохранила-->
+                        <!--классический стиль легендарной модели, включая верх из гладкой кожи и-->
+                        <!--культовый мысок-ракушку. Три полоски из искусственной кожи.</p>-->
+                        <!--<button> Купить</button>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</ng-template>-->
+                        <!--<ng-template ngbSlide>-->
+                        <!--<div class="slider-conteiner">-->
+                        <!--<div class="slider-foto">-->
+                        <!--<a href="#"> <img src="/assets/img/slider-foto1.png"> </a>-->
+                        <!--</div>-->
+                        <!--<div class="slider-content">-->
+                        <!--<h2> DASDSA <br> Super Star</h2>-->
+                        <!--<p> Кроссовки Superstar были представлены в 1969 году в качестве обуви для баскетбола,-->
+                        <!--но модель быстро завоевала популярность среди поклонников уличного стиля. Современная-->
+                        <!--интерпретация сохранила-->
+                        <!--классический стиль легендарной модели, включая верх из гладкой кожи и-->
+                        <!--культовый мысок-ракушку. Три полоски из искусственной кожи.</p>-->
+                        <!--<button> Купить</button>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</ng-template>-->
+        </ngb-carousel>
+    </div>
+</div>

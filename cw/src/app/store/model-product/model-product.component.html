@@ -1,0 +1,22 @@
+<div class="conteiner">
+    <div class="wrapper">
+        <div class="conteiner-model" >
+            <div class="model-img">
+                <img src="{{data.url}}">
+            </div>
+            <div class="model-text">
+                <h2>{{getData().name}} </h2>
+                <h3> {{data.firm}}</h3>
+                <p> {{data.price}} </p>
+            </div>
+        </div>
+        <p *ngIf="data.bestProduct!==undefined" class="best-module-product"> Лучшее предложение </p>
+        <p> {{data.specifications}}</p>
+        <div class="model-button">
+            <mat-dialog-actions>
+                <button mat-button (click)="close()"> Cancel</button>
+                <button mat-raised-button (click)="save()"> Save</button>
+            </mat-dialog-actions>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+h2 {
+    margin: 10px;
+    text-align: center;
+    color: #4ccfc1;
+    font-family: "Bebas Neue";
+    font-size: 40px;
+}
+
+
+.wrapper-user_information {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.wrapper-user_information p {
+    color: #636363;
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.span-information {
+    color: #a84150;
+    font-family: "Bebas Neue";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 25px;
+}

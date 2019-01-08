@@ -1,0 +1,33 @@
+.data {
+    width: 40px;
+}
+
+.checked {
+    width: 20px;
+}
+
+.amount {
+    width: 20px;
+}
+
+.customer {
+    width: 100px;
+}
+
+.cart {
+    width: 426px;
+}
+
+.buton-order{
+    width: 80px;
+    display: block;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}

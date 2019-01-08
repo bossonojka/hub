@@ -1,0 +1,16 @@
+img {
+    height: 150px;
+    width: 150px;
+}
+
+td {
+    width: 150px;
+}
+tfoot {
+    height: 50px;
+}
+
+.cart-btn {
+    margin-left: 10px;
+
+}

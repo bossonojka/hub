@@ -1,0 +1,16 @@
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.wrapper-admin {
+    margin-top: 20px;
+    display: flex;
+}
+.navigation-admin {
+    width: 20%;
+}
+
+.content-admin{ width: 80%;
+    margin-left:20px;
+}

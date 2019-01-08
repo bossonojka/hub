@@ -1,0 +1,62 @@
+<img *ngIf="showImg" src="{{product.url}}" alt="картинка">
+<img *ngIf="takeImage !=='' && takeImage" src="/assets/img/{{wayImgFront}}">
+
+<form  #myForm="ngForm" class="conteinerRegist">
+    <mat-form-field class="product-fild">
+        <!--Мы указываем fish?.name оператор ? служит если fish.name пустое чтобы не было ошибки и нам не нужно было заполнять пустыми строчками-->
+        <input type="text" matInput
+               placeholder="Название"
+               value=""
+               required
+               [ngModel]="product?.name"
+               name="name">
+        <!--<mat-error *ngIf="titile.invalid">Please enter a name</mat-error>-->
+    </mat-form-field>
+
+    <mat-form-field class="product-fild">
+        <input type="text"
+               matInput placeholder="Фирма"
+               value=""
+               required
+               name="firm"
+               [ngModel]="product?.firm">
+    </mat-form-field>
+
+    <mat-form-field class="product-fild">
+        <input type="text"
+               matInput
+               required
+               placeholder="Цена"
+               name="price"
+               [ngModel]="product?.price">
+    </mat-form-field>
+
+    <mat-form-field class="product-fild">
+        <select matNativeControl placeholder="Лучшее" required [ngModel]="product?.bestProduct" name="bestProduct">
+            <option value="true">true</option>
+            <option value="false">false</option>
+        </select>
+    </mat-form-field>
+
+    <mat-form-field class="product-fild product-description">
+        <textarea
+                matInput
+                required
+                rows="4"
+                placeholder="Характеристики"
+                name="specifications"
+                [ngModel]="product?.specifications">
+        </textarea>
+    </mat-form-field>
+
+    <mat-form-field class="product-fild">
+        <select matNativeControl placeholder="Тип" required [ngModel]="product?.type" name="type">
+            <option value="Видеокарта">Видеокарта</option>
+            <option value="Процессор">Процессор</option>
+        </select>
+    </mat-form-field>
+
+    <button mat-stroked-button class="buton-enterence" type="button" (click)="filePicker.click()"> PickImage</button>
+    <input [formControl]="image" type="file" style="display: none;" #filePicker (change)="onImagePicked($event)">
+    <button mat-raised-button class="buton-enterence" (click)="onSavePost(myForm)"> Сохранить</button>
+</form>

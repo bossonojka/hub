@@ -1,0 +1,30 @@
+.conteiner-order {
+    width: 400px;
+    margin: 0 auto;
+}
+
+    .item-form {
+        display: block;
+    }
+
+.conteiner-checkout {
+    background-image: url("/assets/img/background.png");;
+}
+
+.send-form h2 {
+    text-align: center;
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.send-form p {
+    text-align: center;
+    color: #afafaf;
+    font-family: "Bebas Neue";
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 25px;
+}

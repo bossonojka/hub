@@ -1,0 +1,75 @@
+<form #myForm="ngForm" class="conteinerRegist">
+    <mat-form-field class="product-fild">
+        <!--Мы указываем fish?.name оператор ? служит если fish.name пустое чтобы не было ошибки и нам не нужно было заполнять пустыми строчками-->
+        <input type="text" matInput
+               placeholder="Почта"
+               value=""
+               required
+               [ngModel]="user?.email"
+               name="email">
+        <!--<mat-error *ngIf="titile.invalid">Please enter a name</mat-error>-->
+    </mat-form-field>
+
+    <mat-form-field *ngIf="checkMode()" class="product-fild">
+        <input type="text"
+               matInput
+               required
+               placeholder="Пароль"
+               name="password"
+               [ngModel]="user?.password">
+    </mat-form-field>
+
+    <mat-form-field class="product-fild">
+        <input type="text"
+               matInput placeholder="Имя"
+               value=""
+               required
+               name="name"
+               [ngModel]="user?.name">
+    </mat-form-field>
+
+    <mat-form-field class="product-fild">
+        <input type="text"
+               matInput
+               required
+               placeholder="Фамилия"
+               name="surname"
+               [ngModel]="user?.surname">
+    </mat-form-field>
+
+    <mat-form-field class="product-fild">
+        <input type="text"
+               matInput
+               required
+               placeholder="Адресс"
+               name="adress"
+               [ngModel]="user?.adress">
+    </mat-form-field>
+
+    <mat-form-field class="product-fild">
+        <input type="text"
+               matInput
+               required
+               placeholder="Город"
+               name="city"
+               [ngModel]="user?.city">
+    </mat-form-field>
+
+    <mat-form-field class="product-fild">
+        <input type="text"
+               matInput
+               required
+               placeholder="Номер телефона"
+               name="number"
+               [ngModel]="user?.number">
+    </mat-form-field>
+
+    <mat-form-field class="product-fild">
+        <select matNativeControl required [ngModel]="user?.role" name="role">
+            <option value="admin">Администратор</option>
+            <option value="user">Пользователь</option>
+        </select>
+    </mat-form-field>
+
+    <button mat-raised-button class="buton-enterence" (click)="onSaveUser(myForm)"> Сохранить</button>
+</form>

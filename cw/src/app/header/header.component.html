@@ -1,0 +1,23 @@
+<header>
+    <div class="wrapper">
+        <div class="conteiner-header">
+            <div class="header-item">
+                <a routerLink="/"> <img src="/assets/img/header-logo.png"></a>
+            </div>
+
+            <button mat-button *ngIf="!registr" routerLink="/admin">Вход в систему</button>
+            <button mat-button *ngIf="registr" (click)="logout()" style="margin-left:10px" routerLink="/admin">Выход</button>
+
+            <button mat-button *ngIf="user.checkRol('admin')" routerLink="/admin/main">Админ панель</button>
+            <!--<button mat-button  routerLink="/user/main">Пользовательская панель</button>-->
+            <!--<button mat-button  routerLink="/user/main">Поль  зовательская панель</button>-->
+            <button mat-button *ngIf="user.checkRol('user')" routerLink="/user/main">Пользовательская панель</button>
+
+            <span class="spacer"></span>
+            <div class="header-item">
+                <app-cart-summary></app-cart-summary>
+            </div>
+        </div>
+    </div>
+
+</header>

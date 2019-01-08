@@ -1,0 +1,35 @@
+<div>
+    <button class="btn btn-outline-danger btn-block" (click)="updateAll()"> Обновить данные</button>
+</div>
+
+<table class="table table-bordered table-striped p-a-1">
+    <thead>
+    <tr>
+        <th>Заказчик</th>
+        <th>Дата</th>
+        <th>Статус</th>
+        <th>Общая стоимость</th>
+        <th>Заказы</th>
+        <th>Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let o of myOrders">
+        <td class="customer">{{o.user.name}} {{o.user.surname}}</td>
+        <td class="data"> {{o.date}}</td>
+        <td class="checked"> {{o.checked}}</td>
+        <td class="amount"> {{o.cartPrice}}</td>
+        <td class="cart">
+            <ul>
+                <li *ngFor="let line of o.lines">
+                    <img src="{{line.product.url}}"> Название : {{line.product.name}} .Кол-во : {{line.quantity}}
+                </li>
+            </ul>
+        </td>
+        <td>
+            <button class="btn btn-sm btn-danger buton-order"  (click)="deleteOrder(o._id,null)">Удалить</button>
+            <button class="btn btn-warning btn-table buton-order" *ngIf="o.checked===false" style="margin-top: 5px" (click)="deleteOrder(null,o)">Принять</button>
+        </td>
+    </tr>
+    </tbody>
+</table>

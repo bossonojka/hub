@@ -1,0 +1,100 @@
+<div class="conteiner-checkout">
+    <div *ngIf="orderSent">
+        <h2>Заказ принят!</h2>
+        <p>Спасибо за ваш заказ</p>
+        <p>Заказ отправлен в обработку.</p>
+        <a routerLink="/store">Return to Store</a>
+    </div>
+
+    <mat-card>
+        <form (submit)="saveOrder(myForm)" #myForm="ngForm" class="conteiner-order">
+            <mat-form-field class="item-form">
+                <!--Мы указываем fish?.name оператор ? служит если fish.name пустое чтобы не было ошибки и нам не нужно было заполнять пустыми строчками-->
+                <input type="text" matInput
+                       placeholder="Name"
+                       value=""
+                       required
+                       [ngModel]="order?.name"
+                       name="name">
+                <!--<mat-error *ngIf="titile.invalid">Please enter a name</mat-error>-->
+            </mat-form-field>
+
+            <mat-form-field class="item-form">
+                <!--Мы указываем fish?.name оператор ? служит если fish.name пустое чтобы не было ошибки и нам не нужно было заполнять пустыми строчками-->
+                <input type="text" matInput
+                       placeholder="Surname"
+                       value=""
+                       required
+                       [ngModel]="order?.surname"
+                       name="surname">
+                <!--<mat-error *ngIf="titile.invalid">Please enter a name</mat-error>-->
+            </mat-form-field>
+
+            <mat-form-field class="item-form">
+                <input type="text"
+                       matInput placeholder="Adress"
+                       value=""
+                       required
+                       name="adress"
+                       [ngModel]="order?.adress">
+            </mat-form-field>
+
+            <!--<mat-form-field>-->
+            <!--<input type="text"-->
+            <!--matInput-->
+            <!--placeholder="City"-->
+            <!--name="city"-->
+            <!--[ngModel]="order?.city">-->
+            <!--</mat-form-field>-->
+            <mat-form-field class="item-form">
+                <select matNativeControl required [ngModel]="order?.city" name="city">
+                    <option value="kharkov">Kharkov</option>
+                    <option value="kiev">Kiev</option>
+                    <option value="dnepr">Dnepr</option>
+                </select>
+            </mat-form-field>
+
+
+            <mat-form-field class="item-form">
+                <input type="text"
+                       matNativeControl
+                       matInput
+                       placeholder="Number phone"
+                       name="phone"
+                       [ngModel]="phone?.number">
+            </mat-form-field>
+            <input type="submit" value="Отправить"/>
+        </form>
+    </mat-card>
+</div>
+
+<!--<form *ngIf="!orderSent" #form="ngForm" novalidate (ngSubmit)="submitOrder(form)" class="m-a-1">-->
+<!--<div class="form-group"><label>Name</label> <input class="form-control" #name="ngModel" name="name"-->
+<!--[(ngModel)]="order.name" required/> <span-->
+<!--*ngIf="submitted && name.invalid" class="text-danger">            Please enter your name        </span>-->
+<!--</div>-->
+<!--<div class="form-group"><label>Address</label>-->
+<!--<input class="form-control" #address="ngModel" name="address" [(ngModel)]="order.address" required/>-->
+<!--<span *ngIf="submitted && address.invalid" class="text-danger">  Please enter your address        </span></div>-->
+<!--<div class="form-group">-->
+<!--<label>City</label>-->
+<!--<input class="form-control" #city="ngModel" name="city" [(ngModel)]="order?.city" required/>-->
+<!--<span *ngIf="submitted && city.invalid" class="text-danger">Please enter your city</span>-->
+<!--</div>-->
+<!--<div class="form-group"><label>Phone</label> <input class="form-control" #state="ngModel" name="state"-->
+<!--[(ngModel)]="order.state" required/> <span-->
+<!--*ngIf="submitted && state.invalid" class="text-danger">            Please enter your state        </span>-->
+<!--</div>-->
+<!--<div class="form-group"><label>Zip/Postal Code</label> <input class="form-control" #zip="ngModel" name="zip"-->
+<!--[(ngModel)]="order.zip" required/> <span-->
+<!--*ngIf="submitted && zip.invalid"-->
+<!--class="text-danger">            Please enter your zip/postal code        </span></div>-->
+<!--<div class="form-group"><label>Country</label> <input class="form-control" #country="ngModel" name="country"-->
+<!--[(ngModel)]="order.country" required/> <span-->
+<!--*ngIf="submitted && country.invalid"-->
+<!--class="text-danger">            Please enter your country        </span></div>-->
+<!--<div class="text-xs-center">-->
+<!--<button class="btn btn-secondary" routerLink="/cart">Back</button>-->
+<!--<button class="btn btn-primary" type="submit">Complete Order</button>-->
+<!--</div>-->
+<!--</form>-->

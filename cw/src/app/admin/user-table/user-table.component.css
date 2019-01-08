@@ -1,0 +1,21 @@
+td {
+    width: 100px;
+}
+
+.cart-btn {
+    margin-left: 10px;
+}
+
+.btn-table {
+    margin-bottom: 10px;
+}
+
+.button {
+    width: 100%;
+    margin-top:5px;
+}
+
+.button:hover {
+    background: #4c59df;
+    transition:1s;
+}

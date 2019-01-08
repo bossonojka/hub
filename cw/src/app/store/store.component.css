@@ -1,0 +1,192 @@
+.conteiner-category {
+    margin-top: 10px;
+    width: 100%;
+    min-height: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
+    background-color: #4ccfc1;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.conteiner-category ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-bottom: 0px;
+    height: 50px;
+}
+
+.conteiner-category ul li {
+    list-style: none;
+    padding-right: 50px;
+    margin-top: 4px;
+
+}
+
+.conteiner-category ul li a {
+    font-family: "Bebas Neue";
+    font-size: 26px;
+}
+
+a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid white;
+}
+
+.linkActive {
+    color: #fff595;
+}
+
+.slider {
+    background-image: url("/assets/img/background.png");
+
+}
+
+.slider img {
+    width: 600px;
+    height: 600px;
+}
+
+.slider-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slider-content {
+    padding-top: 100px;
+    width: 550px;
+    text-align: center;
+}
+
+.slider-content h2 {
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 61px;
+    font-weight: 400;
+    line-height: 54px;
+}
+
+.slider-content {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.conteiner-best-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.best-product h2 {
+    margin: 30px;
+    text-align: center;
+    color: #4ccfc1;
+    font-family: "Bebas Neue";
+    font-size: 61px;
+}
+
+.best-product__item h3 {
+    text-align: center;
+    color: #afafaf;
+    font-family: "Bebas Neue";
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.best-product__item img {
+    height: 350px;
+    width: 350px;
+}
+
+.best-product__button {
+    margin: 30px;
+    text-align: center;
+}
+
+.best-product__button button {
+    font-size: 20px;
+}
+
+/*-------------*/
+
+.product-list_header {
+    background-image: url("/assets/img/background.png");
+    height: 60px;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.product-list_header h2 {
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.product-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-list__item {
+    width: 350px;
+    height: 380px;
+    margin-top: 50px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+    border-bottom: 4px solid #4ccfc1;
+}
+
+.product-list__item img {
+    margin-left: 10%;
+    width: 300px;
+    height: 280px;
+}
+
+.product-list__item h3 {
+    text-align: center;
+    color: #afafaf;
+    font-family: "Bebas Neue";
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.content-list__item {
+    text-align: center;
+}
+
+.list-item_price {
+    color: #af5b5c;
+    font-family: "Bebas Neue";
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.list-item_button{
+    color: #797979;
+    font-family: "Bebas Neue";
+    font-size: 27px;
+    padding-bottom: 1px;
+}
+
+

@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <h2> {{registUser.name}} , вы находитесь в панеле клиента </h2>
+  <div class="wrapper-admin">
+    <div class="navigation-admin">
+      <button class="btn btn-outline-info btn-block" routerLink="/user/main/information" routerLinkActive="active">
+        Информация о юзере
+      </button>
+      <!--<button class="btn btn-outline-info btn-block" routerLink="/user/main/orders" routerLinkActive="active">-->
+        <!--Заказы-->
+      <!--</button>-->
+    </div>
+    <div class="content-admin">
+      <router-outlet> </router-outlet>
+    </div>
+  </div>
+</div>

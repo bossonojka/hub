@@ -1,0 +1,93 @@
+<div class="autoriz-main">
+    <div class="autoriz-conteiner">
+
+        <!--<input matInput placeholder="Enter your email" [formControl]="email" required>-->
+        <mat-tab-group class="tab-registr">
+            <mat-tab label="Регистрация">
+                <mat-card class="mat-card-registr">
+
+                    <form>
+                        <mat-form-field class="autoriz-fild">
+                            <input matInput placeholder="Введите емейл" name='email'
+                                   [formControl]="inputEmail"
+                                   required>
+                            <mat-error *ngIf="inputEmail.invalid">{{getErrorEmail()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="autoriz-fild">
+                            <input matInput [formControl]="inputPassword" name="password" required minlength="6"
+                                   placeholder="Введите пароль"
+                                   [type]="hide ? 'password' : 'text'">
+                            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
+                            </mat-icon>
+                            <mat-error *ngIf="inputPassword.invalid">{{getErrorPassword()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="autoriz-fild">
+                            <input matInput placeholder="Введите имя" name="name" [formControl]="inputName"
+                                   required>
+                            <mat-error *ngIf="inputName.invalid">{{getErrorRequired()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="autoriz-fild">
+                            <input type="text" matInput placeholder="Введите фамилию" [formControl]="inputSurname"
+                                   name="surname" value="" required>
+                            <!--[ngModel]="user?.surname"-->
+
+                            <mat-error *ngIf="inputSurname.invalid">{{getErrorRequired()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="autoriz-fild">
+                            <input type="text" matInput
+                                   placeholder="Введите адрес"
+                                   value=""
+                                   [formControl]="inputAdress"
+                                   required
+                                   name="adress">
+
+                            <mat-error *ngIf="inputAdress.invalid">{{getErrorRequired()}}</mat-error>
+
+                        </mat-form-field>
+
+                        <mat-form-field class="autoriz-fild">
+                            <input type="text" matInput placeholder="Введите город" [formControl]="inputCity"
+                                   value="" required name="city">
+                            <mat-error *ngIf="inputCity.invalid">{{getErrorRequired()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="autoriz-fild">
+                            <input type="text" matInput placeholder="Номер телефона" [formControl]="inputNumber"
+                                   value="" required name="number">
+                            <mat-error *ngIf="inputNumber.invalid">{{getErrorRequired()}}</mat-error>
+                        </mat-form-field>
+                        <button mat-raised-button color="warn" class="buton-registr" (click)="saveUser()">Зарегистрироваться</button>
+                    </form>
+
+                </mat-card>
+            </mat-tab>
+
+            <mat-tab label="Авторизация">
+                <mat-card class="mat-card-autoriz">
+                    <form>
+                        <mat-form-field class="autoriz-fild">
+                            <input matInput placeholder="Введите емейл" name='email'
+                                   [formControl]="inputEmailAutoriz"
+                                   required>
+                            <mat-error *ngIf="inputEmailAutoriz.invalid">{{getErrorEmail()}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="autoriz-fild">
+                            <input matInput [formControl]="inputPasswordAutoriz" name="password" required minlength="6"
+                                   placeholder="Введите пароль"
+                                   [type]="hide ? 'password' : 'text'">
+                            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
+                            </mat-icon>
+                            <mat-error *ngIf="inputPasswordAutoriz.invalid">{{getErrorPassword()}}</mat-error>
+                        </mat-form-field>
+                        <button mat-raised-button  class="buton-enterence" (click)="enterenseUser()" color="primary">Ввойти</button>
+                    </form>
+                </mat-card>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

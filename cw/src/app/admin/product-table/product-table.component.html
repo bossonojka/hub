@@ -1,0 +1,40 @@
+<div>
+    <button mat-button class="button" [routerLink]="['/admin/main/products/create']"> Добавить товар</button>
+    <button class="btn btn-outline-danger btn-block" (click)="updateAll()"> Обновить данные</button>
+</div>
+
+
+
+<table class="table table-bordered table-striped p-a-1">
+    <thead>
+    <tr>
+        <th>Картинка</th>
+        <th>Название</th>
+        <th>Производитель</th>
+        <th>Характеристики</th>
+        <th>Тип</th>
+        <th class="text-xs-right">Цена</th>
+        <th class="text-xs-right">Лучшее</th>
+        <th class="text-xs-right">Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+        <td><img src="{{product.url}}"></td>
+        <td>{{product.name}}</td>
+        <td>{{product.firm}}</td>
+        <td>{{product.specifications}}</td>
+        <td>{{product.type}}</td>
+        <td>{{product.price}}</td>
+        <td *ngIf="product.bestProduct">{{product.bestProduct}}</td>
+        <td *ngIf="!product.bestProduct">False</td>
+        <td class="text-xs-center">
+            <button class="btn btn-warning btn-table" [routerLink]="['/admin/main/products/edit', product.id]">
+                Изменить
+            </button>
+            <button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)"> Удалить</button>
+        </td>
+    </tr>
+    </tbody>
+
+</table>

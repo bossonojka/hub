@@ -1,0 +1,23 @@
+img {
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-fild {
+    display: block;
+    width: 400px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.product-description {
+
+}
+
+.buton-enterence {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+}
