@@ -3,7 +3,7 @@
     width: 100%;
     min-height: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
-    background-color: #4ccfc1;
+    background-color: orange;
 }
 
 .wrapper {
@@ -95,7 +95,7 @@ a:after {
 .best-product h2 {
     margin: 30px;
     text-align: center;
-    color: #4ccfc1;
+    color: orange;
     font-family: "Bebas Neue";
     font-size: 61px;
 }
@@ -115,7 +115,7 @@ a:after {
 }
 
 .best-product__button {
-    margin: 30px;
+    
     text-align: center;
 }
 
@@ -124,6 +124,10 @@ a:after {
 }
 
 /*-------------*/
+
+.product-list{
+    margin-bottom: 50px;
+}
 
 .product-list_header {
     background-image: url("/assets/img/background.png");
@@ -152,7 +156,7 @@ a:after {
     height: 380px;
     margin-top: 50px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
-    border-bottom: 4px solid #4ccfc1;
+    border-bottom: 4px solid orange;
 }
 
 .product-list__item img {
@@ -185,8 +189,79 @@ a:after {
 .list-item_button{
     color: #797979;
     font-family: "Bebas Neue";
-    font-size: 27px;
+    font-size: 20px;
     padding-bottom: 1px;
+    width: 100%;
 }
 
+.btn-best{
+    width: 100%;
+}
 
+.poster{
+    position:relative;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-right: 7px;
+    border-radius: 5px;
+    padding: 7px 9px;
+    background: #ebebeb;
+    height: 35px;
+    width: 100%;
+    cursor: pointer;
+    color: #797979;
+    font-family: 'Bebas Neue';
+    font-size: 16px;
+  }
+  
+  .poster1{
+    position:relative;
+    left: 80px;
+    bottom:42px;
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 7px;
+    border-radius: 5px;
+    padding: 7px 9px;
+    background: rgba(168, 0, 255, 0);
+    height: 35px;
+    width: 155px;
+    color: #fbf7f7 !important;
+  }
+  
+  .descr{
+    text-align: left;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: normal;
+    display:none;
+    margin-left:-150px;
+    padding:10px;
+    background: #ebebeb;
+    border: orange 2px solid;
+    width: 400px;
+    height:400px;
+    color: #616161;;
+    -moz-box-shadow:0 5px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0 5px 5px rgba(0,0,0,0.3);
+    box-shadow:0 5px 5px rgba(0,0,0,0.3);
+  }
+  
+  .poster:hover .descr{
+    display:block;
+    position:absolute;
+    right: 40px;
+    bottom:40px;
+    z-index:9999;
+    width:400px;
+  }
+  
+  .poster1:hover .descr{
+    display:block;
+    position:absolute;
+    right: 40px;
+    bottom:40px;
+    z-index:9999;
+    width:400px;
+  }

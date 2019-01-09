@@ -8,7 +8,7 @@ const User = require('./routes/user');
 var mongoose = require('mongoose');
 
 const app = express();
-mongodb://tukva:<dbpassword>@ds251894.mlab.com:51894/blog2
+
 mongoose.connect('mongodb://JetPie:Qwerty4121@ds055895.mlab.com:55895/shop', { useNewUrlParser: true }).then(() => {
     console.log('connected DataBase');
 }).catch(() => {

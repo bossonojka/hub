@@ -1,16 +1,16 @@
 <div>
-    <button class="btn btn-outline-danger btn-block" (click)="updateAll()"> Обновить данные</button>
+    <button class="btn btn-outline-danger btn-block" (click)="updateAll()"> Update data</button>
 </div>
 
 <table class="table table-bordered table-striped p-a-1">
     <thead>
     <tr>
-        <th>Заказчик</th>
-        <th>Дата</th>
-        <th>Статус</th>
-        <th>Общая стоимость</th>
-        <th>Заказы</th>
-        <th>Действия</th>
+        <th>Customer</th>
+        <th>Data</th>
+        <th>Status</th>
+        <th>Total cost</th>
+        <th>Orders</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -22,13 +22,13 @@
         <td class="cart">
             <ul>
                 <li *ngFor="let line of o.lines">
-                    <img src="{{line.product.url}}"> Название : {{line.product.name}} .Кол-во : {{line.quantity}}
+                    <img src="{{line.product.url}}"> Name : {{line.product.name}} .Quantity : {{line.quantity}}
                 </li>
             </ul>
         </td>
         <td>
-            <button class="btn btn-sm btn-danger buton-order"  (click)="deleteOrder(o._id,null)">Удалить</button>
-            <button class="btn btn-warning btn-table buton-order" *ngIf="o.checked===false" style="margin-top: 5px" (click)="deleteOrder(null,o)">Принять</button>
+            <button class="btn btn-sm btn-danger buton-order"  (click)="deleteOrder(o._id,null)">Remove</button>
+            <button class="btn btn-warning btn-table buton-order" *ngIf="o.checked===false" style="margin-top: 5px" (click)="deleteOrder(null,o)">Accept</button>
         </td>
     </tr>
     </tbody>

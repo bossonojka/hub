@@ -5,12 +5,13 @@
                 <img src="{{data.url}}">
             </div>
             <div class="model-text">
-                <h2>{{getData().name}} </h2>
-                <h3> {{data.firm}}</h3>
+                
+                <h2> {{log(data)}} </h2>
+                <h3> {{data.manufacturer}}</h3>
                 <p> {{data.price}} </p>
             </div>
         </div>
-        <p *ngIf="data.bestProduct!==undefined" class="best-module-product"> Лучшее предложение </p>
+        <p *ngIf="data.bestProduct!==undefined" class="best-module-product">Best deals</p>
         <p> {{data.specifications}}</p>
         <div class="model-button">
             <mat-dialog-actions>

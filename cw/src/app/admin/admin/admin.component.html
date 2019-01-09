@@ -1,17 +1,17 @@
 <div class="wrapper">
-    <h2> {{registUser.name}} , вы находитесь в панеле администратора </h2>
+    <h2> {{registUser.name}}, you are entered admin's controls </h2>
     <div class="wrapper-admin">
-        <div class="navigation-admin">
-            <button class="btn btn-outline-info btn-block" routerLink="/admin/main/products" routerLinkActive="active">
-                Обувь
-            </button>
-            <button class="btn btn-outline-info btn-block" routerLink="/admin/main/orders" routerLinkActive="active">
-                Заказы
-            </button>
-            <button class="btn btn-outline-info btn-block" routerLink="/admin/main/users"> Пользователи</button>
-        </div>
         <div class="content-admin">
             <router-outlet></router-outlet>
         </div>
+        <div class="navigation-admin">
+                <button class="btn btn-outline-info btn-block" routerLink="/admin/main/products" routerLinkActive="active">
+                    Accessories
+                </button>
+                <button class="btn btn-outline-info btn-block" routerLink="/admin/main/orders" routerLinkActive="active">
+                    Orders
+                </button>
+                <button class="btn btn-outline-info btn-block" routerLink="/admin/main/users">Users</button>
+            </div>
     </div>
 </div>

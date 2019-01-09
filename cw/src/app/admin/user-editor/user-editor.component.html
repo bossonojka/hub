@@ -2,7 +2,7 @@
     <mat-form-field class="product-fild">
         <!--Мы указываем fish?.name оператор ? служит если fish.name пустое чтобы не было ошибки и нам не нужно было заполнять пустыми строчками-->
         <input type="text" matInput
-               placeholder="Почта"
+               placeholder="Email"
                value=""
                required
                [ngModel]="user?.email"
@@ -14,14 +14,14 @@
         <input type="text"
                matInput
                required
-               placeholder="Пароль"
+               placeholder="Password"
                name="password"
                [ngModel]="user?.password">
     </mat-form-field>
 
     <mat-form-field class="product-fild">
         <input type="text"
-               matInput placeholder="Имя"
+               matInput placeholder="Name"
                value=""
                required
                name="name"
@@ -32,7 +32,7 @@
         <input type="text"
                matInput
                required
-               placeholder="Фамилия"
+               placeholder="Surname"
                name="surname"
                [ngModel]="user?.surname">
     </mat-form-field>
@@ -41,7 +41,7 @@
         <input type="text"
                matInput
                required
-               placeholder="Адресс"
+               placeholder="Address"
                name="adress"
                [ngModel]="user?.adress">
     </mat-form-field>
@@ -50,7 +50,7 @@
         <input type="text"
                matInput
                required
-               placeholder="Город"
+               placeholder="City"
                name="city"
                [ngModel]="user?.city">
     </mat-form-field>
@@ -59,17 +59,17 @@
         <input type="text"
                matInput
                required
-               placeholder="Номер телефона"
+               placeholder="Phone number"
                name="number"
                [ngModel]="user?.number">
     </mat-form-field>
 
     <mat-form-field class="product-fild">
         <select matNativeControl required [ngModel]="user?.role" name="role">
-            <option value="admin">Администратор</option>
-            <option value="user">Пользователь</option>
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
         </select>
     </mat-form-field>
 
-    <button mat-raised-button class="buton-enterence" (click)="onSaveUser(myForm)"> Сохранить</button>
+    <button mat-raised-button class="buton-enterence" (click)="onSaveUser(myForm)"> Save</button>
 </form>

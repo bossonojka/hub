@@ -12,16 +12,12 @@ import {Router} from '@angular/router';
     styleUrls: ['./model-product.component.css']
 })
 export class ModelProductComponent implements OnInit {
-    
+
     constructor(public dialogRef: MatDialogRef<ModelProductComponent>,
-                @Inject(MAT_DIALOG_DATA) public data: any, private route: Router) {
+                @Inject(MAT_DIALOG_DATA) public data: any) {
     }
 
     ngOnInit() {
-    }
-
-    getData(){
-        return this.data;
     }
 
     close() {
@@ -31,4 +27,6 @@ export class ModelProductComponent implements OnInit {
     save() {
         this.dialogRef.close(this.data);
     }
+
+    log(val) { console.log(val); }
 }

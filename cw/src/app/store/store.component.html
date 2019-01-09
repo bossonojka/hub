@@ -2,13 +2,21 @@
 
 <div class="best-product">
     <div class="wrapper">
-        <h2>Best Product</h2>
+        <h2>Best Deal</h2>
         <div class="conteiner-best-product">
             <div class="best-product__item" *ngFor="let bestproduct of BestProduct ">
                 <h3>{{bestproduct.name}}</h3>
                 <img src="{{bestproduct.url}}">
                 <div class="best-product__button">
-                    <button mat-button (click)="openDialog(bestproduct)"> Узнать больше</button>
+                    <div class="poster">Show Info
+                        <div class="descr">
+                            <p>Manufacturer: {{bestproduct.manufacturer}}</p>
+                            <p>Price: {{"₴" + bestproduct.price}}</p>
+                            <p>Type: {{bestproduct.type}}</p>
+                            <p>Description: {{bestproduct.description}}</p>
+                        </div>
+                    </div>
+                    <button mat-button class="list-item_button btn-best" (click)="addProductToCart(bestproduct)">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -19,82 +27,35 @@
     <div class="wrapper">
         <ul>
             <li>
-                <a href="#" [ngClass]="{linkActive:cat==selectedCategory}" (click)="changeCategory()">Все товары</a>
+                <a href="#" [ngClass]="{linkActive:cat==selectedCategory}" (click)="changeCategory()">All accessories</a>
             </li>
             <li *ngFor="let cat of categories">
-                <!--//Если сat == selectedCategory , выбранная категория = названию добавляем class который меняет цвет-->
                 <a href="#" [ngClass]="{linkActive:cat==selectedCategory}" (click)="changeCategory(cat)">{{ cat }}</a>
             </li>
         </ul>
     </div>
 </div>
 
-<!--<div class="product-list">-->
-    <!--<div class="product-list_header">-->
-        <!--<div class="wrapper">-->
-            <!--<h2> Весь каталог товара </h2>-->
-        <!--</div>-->
-    <!--</div>-->
-
 <div class="product-list">
     <div class="wrapper">
         <div class="product-conteiner">
-            <div class="product-list__item" *ngFor=" let productItem of products ">
-                <img src="{{productItem.url}}">
-                <h3> {{productItem.name }}</h3>
-                <div class="content-list__item">
-                    <span class="list-item_price"> {{productItem.price }} </span>
-                <button mat-button class="list-item_button" (click)="openDialog(productItem)" > Подробнее </button>
+                <div class="product-list__item" *ngFor=" let productItem of products ">
+                    <img src="{{productItem.url}}">
+                    <h3> {{productItem.name }}</h3>
+                    <div class="content-list__item">
+                        <span class="list-item_price"> {{ "₴" + productItem.price}} </span><br>
+                        <div class="poster">Show Info
+                            <div class="descr">
+                                <p>Manufacturer: {{productItem.manufacturer}}</p>
+                                <p>Price: {{"₴" + productItem.price}}</p>
+                                <p>Type: {{productItem.type}}</p>
+                                <p>Description: {{productItem.description}}</p>
+                            </div>
+                        </div>
+                        <button mat-button class="list-item_button">Add to Cart</button>
+                    <!--<button mat-button class="list-item_button" (click)="openDialog(productItem)" > Подробнее </button>-->
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>
-
-
-<!--<div *ngIf="categories != undefined" class="col-xs-3 bg-info p-a-1"> {{categories.length}} Categories</div>-->
-
-<!--<div class="conteinerTest">-->
-    <!--<mat-card *ngFor="let product of products" class="product-conteiner">-->
-        <!--<mat-card-title>-->
-            <!--{{product.name}}-->
-        <!--</mat-card-title>-->
-        <!--<mat-card-subtitle>-->
-            <!--{{product.firm}}-->
-        <!--</mat-card-subtitle>-->
-        <!--<img mat-card-image src="{{product.url}}">-->
-        <!--<mat-card-footer>-->
-            <!--{{product.price}}-->
-            <!--{{product.description}}-->
-            <!--<button class="btn btn-success btn-sm pull-xs-right" (click)="addProductToCart(product)"> Add To Cart</button>-->
-        <!--</mat-card-footer>-->
-    <!--</mat-card>-->
-<!--</div>-->
-
-
-<!--<div class="btn-group pull-xs-right">-->
-    <!--<button *ngFor="let page of pageNumbers" (click)="changePage(page)" class="btn btn-outline-primary"-->
-            <!--[class.active]="page == selectedPage"> {{page}}-->
-    <!--</button>-->
-<!--</div>-->
-
-
-<!--<a class="dial-but" href="#ModalOpen" title="">Подробнее</a>-->
-
-<!--<div id="ModalOpen" class="Window">-->
-  <!--<div>-->
-    <!--<a href="#close" title="Закрыть" class="close">X</a>-->
-    <!--<mat-card-title>-->
-      <!--{{productItem.name}}-->
-    <!--</mat-card-title>-->
-    <!--<mat-card-subtitle>-->
-      <!--{{productItem.firm}}-->
-    <!--</mat-card-subtitle>-->
-    <!--<img mat-card-image src="{{productItem.url}}">-->
-    <!--<mat-card-footer>-->
-      <!--{{productItem.price}}-->
-      <!--{{productItem.description}}-->
-      <!--<button class="btn btn-success btn-sm pull-xs-right" (click)="addProductToCart(productItem)"> Add To Cart</button>-->
-    <!--</mat-card-footer>-->
-  <!--</div>-->
-<!--</div>-->

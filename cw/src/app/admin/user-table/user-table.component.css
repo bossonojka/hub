@@ -10,12 +10,21 @@ td {
     margin-bottom: 10px;
 }
 
+.btn-block{
+    margin-bottom: 10px;
+}
+
 .button {
     width: 100%;
     margin-top:5px;
+    color: #e9b416;
+    width: 100%;
+    margin-top:5px;
+    border:  #ffc107 1px solid;
 }
 
 .button:hover {
-    background: #4c59df;
-    transition:1s;
+    color: white;
+    background: #ffce2b;
+    transition:0.7s;
 }

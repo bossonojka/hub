@@ -25,8 +25,9 @@ export class DatasourseService implements OnInit {
                 return {
                     id: post._id,
                     name: post.name,
-                    firm: post.firm,
+                    manufacturer: post.manufacturer,
                     url: post.url,
+                    description: post.description,
                     specifications: post.specifications,
                     type: post.type,
                     price: post.price,
@@ -62,8 +63,9 @@ export class DatasourseService implements OnInit {
                 return {
                     id: post._id,
                     name: post.name,
-                    firm: post.firm,
+                    manufacturer: post.manufacturer,
                     url: post.url,
+                    description: post.description,
                     specifications: post.specifications,
                     type: post.type,
                     price: post.price,

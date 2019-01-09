@@ -55,35 +55,34 @@ export class ProductEditorComponent implements OnInit {
             const newProduct = {
                 id: null,
                 name: form.value.name,
-                firm: form.value.firm,
+                manufacturer: form.value.manufacturer,
                 price: form.value.price,
                 bestProduct: form.value.bestProduct,
+                description: form.value.description,
                 specifications: form.value.specifications,
                 type: form.value.type,
                 url: this.wayImg
             };
             this.data.addProduct(newProduct);
-            alert('Товар был добавлены , вернитесь обратно и обновите данные');
+            alert('This product has been added, go back and update the data.');
             this.route.navigateByUrl('/admin/main/products');
-            // this.registrValidation.open('Данные были добавлены, вернитесь обратно и обновите данные', 'Ok', {duration: 1000});
         }
         if (this.mode === 'edit') {
             const editProduct = {
                 id: this.productId,
                 name: form.value.name,
-                firm: form.value.firm,
+                manufacturer: form.value.manufacturer,
                 price: form.value.price,
                 bestProduct: form.value.bestProduct,
                 type: form.value.type,
                 description: form.value.description,
+                specifications: form.value.specifications,
                 url: this.wayImg
             };
             this.data.upgradeProduct(editProduct);
-            alert('Товар был изменён , вернитесь обратно и обновите данные');
+            alert('The product has been changed, go back and update the data.');
             this.route.navigateByUrl('/admin/main/products');
-            // this.registrValidation.open('Данные были измененны, вернитесь обратно и обновите данные', 'Ok', {duration: 1000});
         }
-        // form.value.
     }
 
     onImagePicked(event: Event) {

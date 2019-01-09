@@ -16,11 +16,19 @@ td {
 }
 
 .button {
+    color: #e9b416;
     width: 100%;
     margin-top:5px;
+    margin-bottom: 10px;
+    border:  #ffc107 1px solid;
 }
 
 .button:hover {
-    background: #4c59df;
-    transition:1s;
+    color: white;
+    background-color: #ffc107;
+    transition:0.7s;
+}
+
+.btn-block{
+    margin-bottom: 10px;
 }

@@ -1,8 +1,7 @@
 <div class="conteiner-checkout">
     <div *ngIf="orderSent">
-        <h2>Заказ принят!</h2>
-        <p>Спасибо за ваш заказ</p>
-        <p>Заказ отправлен в обработку.</p>
+        <h2>Order is accepted!</h2>
+        <p>Thanks for your order.</p>
         <a routerLink="/store">Return to Store</a>
     </div>
 
@@ -63,7 +62,7 @@
                        name="phone"
                        [ngModel]="phone?.number">
             </mat-form-field>
-            <input type="submit" value="Отправить"/>
+            <input type="submit" value="Send"/>
         </form>
     </mat-card>
 </div>

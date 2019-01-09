@@ -27,7 +27,7 @@ export class OrderTableComponent implements OnInit {
     deleteOrder(id, order) {
         if (id !== null) {
             this.orderService.deleteOrder(id);
-            alert('Заказ был удалён , обновите данные');
+            alert('Order has been deleted, update data.');
         }
         else {
             const changeOrder = {

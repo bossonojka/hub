@@ -1,6 +1,6 @@
 <div>
-    <button mat-button class="button" [routerLink]="['/admin/main/products/create']"> Добавить товар</button>
-    <button class="btn btn-outline-danger btn-block" (click)="updateAll()"> Обновить данные</button>
+    <button mat-button class="button" [routerLink]="['/admin/main/products/create']"> Add product</button>
+    <button class="btn btn-outline-danger btn-block" (click)="updateAll()"> Update data</button>
 </div>
 
 
@@ -8,21 +8,23 @@
 <table class="table table-bordered table-striped p-a-1">
     <thead>
     <tr>
-        <th>Картинка</th>
-        <th>Название</th>
-        <th>Производитель</th>
-        <th>Характеристики</th>
-        <th>Тип</th>
-        <th class="text-xs-right">Цена</th>
-        <th class="text-xs-right">Лучшее</th>
-        <th class="text-xs-right">Действия</th>
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Manufacturer</th>
+        <th>Description</th>
+        <th>Specifications</th>
+        <th>Type</th>
+        <th class="text-xs-right">Price</th>
+        <th class="text-xs-right">The best</th>
+        <th class="text-xs-right">Actions</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let product of products">
         <td><img src="{{product.url}}"></td>
         <td>{{product.name}}</td>
-        <td>{{product.firm}}</td>
+        <td>{{product.manufacturer}}</td>
+        <td>{{product.description}}</td>
         <td>{{product.specifications}}</td>
         <td>{{product.type}}</td>
         <td>{{product.price}}</td>
@@ -30,9 +32,9 @@
         <td *ngIf="!product.bestProduct">False</td>
         <td class="text-xs-center">
             <button class="btn btn-warning btn-table" [routerLink]="['/admin/main/products/edit', product.id]">
-                Изменить
+                Edit
             </button>
-            <button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)"> Удалить</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)"> Remove</button>
         </td>
     </tr>
     </tbody>

@@ -78,7 +78,7 @@ export class UserService {
             }
 
             if (data.role === 'user') {
-                this.router.navigateByUrl('/user');
+                this.router.navigateByUrl('/user/main/information');
             }
         });
     }

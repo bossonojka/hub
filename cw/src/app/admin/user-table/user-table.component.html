@@ -1,19 +1,18 @@
 <div>
-    <button mat-button class="button" [routerLink]="['/admin/main/users/create']"> Добавить пользователя</button>
-    <button class="btn btn-outline-danger btn-block" (click)="updateAll()"> Обновить данные</button>
+    <button mat-button class="button btn btn-warning btn-table" [routerLink]="['/admin/main/users/create']">Add user</button>
+    <button class="btn btn-outline-danger btn-block" (click)="updateAll()"> Update data</button>
 </div>
-
 <table class="table table-bordered table-striped p-a-1">
     <thead>
     <tr>
-        <th>Почта</th>
-        <th>Имя</th>
-        <th>Фамилия</th>
-        <th>Номер телефона</th>
-        <th class="text-xs-right">Адрес</th>
-        <th class="text-xs-right">Город</th>
-        <th class="text-xs-right">Роль</th>
-        <th class="text-xs-right">Действия</th>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Phone number</th>
+        <th class="text-xs-right">Address</th>
+        <th class="text-xs-right">City</th>
+        <th class="text-xs-right">Level</th>
+        <th class="text-xs-right">Action</th>
     </tr>
     </thead>
     <tbody>
@@ -26,11 +25,10 @@
         <td>{{user.city}}</td>
         <td>{{user.role}}</td>
         <td class="text-xs-center">
-            <button class="btn btn-warning btn-table" [routerLink]="['/admin/main/users/edit', user._id]"> Изменить
+            <button class="btn btn-warning btn-table" [routerLink]="['/admin/main/users/edit', user._id]"> Edit
             </button>
-            <button class="btn btn-sm btn-danger" (click)="deleteUser(user._id)"> Удалить</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteUser(user._id)"> Remove</button>
         </td>
     </tr>
     </tbody>
-
 </table>

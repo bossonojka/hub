@@ -29,8 +29,7 @@ export class UserTableComponent implements OnInit {
 
     deleteUser(id) {
         this.userService.deleteUser(id);
-        alert('Пользователь был удалён , обновите данные');
-        // this.matSnack.open('Данные были удалены, обновите данные', 'Ok', {duration: 1000});
+        alert('The user has been deleted, update the data.');
     }
 
     updateAll() {

@@ -2,7 +2,7 @@
     <thead>
     <tr>
         <th>Quantity</th>
-        <th>Foto</th>
+        <th>Picture</th>
         <th>Product</th>
         <th class="text-xs-right">Price</th>
         <th class="text-xs-right">Subtotal</th>
@@ -18,8 +18,8 @@
         </td>
         <td><img src="{{line.product.url}}"></td>
         <td>{{line.product.name}}</td>
-        <td class="text-xs-right"> {{line.product.price | currency:"USD":true:"2.2-2"}}</td>
-        <td class="text-xs-right"> {{(line.lineTotal) | currency:"USD":true:"2.2-2" }}</td>
+        <td class="text-xs-right"> {{line.product.price | currency:"₴":true:"2.2-2"}}</td>
+        <td class="text-xs-right"> {{(line.lineTotal) | currency:"₴":true:"2.2-2" }}</td>
         <td class="text-xs-center">
             <button class="btn btn-sm btn-danger" (click)="cart.removeLine(line.product.id)"> Remove</button>
         </td>
@@ -28,14 +28,14 @@
     <tfoot>
     <tr class="last-tr">
         <td colspan="3" class="text-xs-right">Total:</td>
-        <td class="text-xs-right"> {{cart.cartPrice | currency:"USD":true:"2.2-2"}}</td>
+        <td class="text-xs-right"> {{cart.cartPrice | currency:"₴":true:"2.2-2"}}</td>
     </tr>
     </tfoot>
 </table>
 
 <div class="text-xs-center">
-    <button class="btn btn-primary cart-btn" routerLink="/store">Продолжить покупки</button>
-    <button class="btn btn-secondary cart-btn" (click)="makeOrder()" [disabled]="cart.lines.length == 0">Заказать
+    <button class="btn btn-primary cart-btn" routerLink="/store">Continue shopping</button>
+    <button class="btn btn-secondary cart-btn" (click)="makeOrder()" [disabled]="cart.lines.length == 0">Checkout
     </button>
     <!--<button class="btn btn-secondary cart-btn" *ngIf="registr">Посмотреть информацию о пользователе</button>-->
     <!--<button class="btn btn-secondary cart-btn" *ngIf="registr">Перейти к меню пользователя</button>-->

@@ -62,7 +62,7 @@ export class UserEditorComponent implements OnInit {
                 role: form.value.role,
             };
             this.userService.createUser(newUser);
-            alert('Пользователь был добавлены , вернитесь обратно и обновите данные');
+            alert('The user has been added, go back and update the data.');
             this.route.navigateByUrl('/admin/main/users');
         }
         else {
@@ -78,7 +78,7 @@ export class UserEditorComponent implements OnInit {
                 role: form.value.role,
             };
             this.userService.upgradeUser(editUser);
-            alert('Пользователь был изминён , вернитесь обратно и обновите данные');
+            alert('User has been changed, go back and update data.');
             this.route.navigateByUrl('/admin/main/users');
         }
     }

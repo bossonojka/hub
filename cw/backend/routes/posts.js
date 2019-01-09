@@ -8,7 +8,8 @@ router.post("", function (req, res, next) {
 
     const product = new ProductModel({
         name: req.body.name,
-        firm: req.body.firm,
+        manufacturer: req.body.manufacturer,
+        description: req.body.description,
         specifications: req.body.specifications,
         price: req.body.price,
         type: req.body.type,
@@ -32,7 +33,8 @@ router.put('/:id', function (req, res) {
 
     var id = req.params.id;
     var name = req.body.name;
-    var firm = req.body.firm;
+    var manufacturer = req.body.manufacturer;
+    var description = req.body.description;
     var specifications = req.body.specifications;
     var type = req.body.type;
     var price = req.body.price;
@@ -42,7 +44,8 @@ router.put('/:id', function (req, res) {
     ProductModel.findOneAndUpdate({_id: id},
         {
             name,
-            firm,
+            manufacturer,
+            description,
             specifications,
             type,
             price,
@@ -82,7 +85,7 @@ router.get('/:id', function (req, res, next) {
 })
 
 // router.get('/:findFirm', function (req, res, next) {
-//     ProductModel.findOne({firm: req.params.findFirm}).then(result => {
+//     ProductModel.findOne({manufacturer: req.params.findFirm}).then(result => {
 //             console.log(result);
 //             if (result)
 //                 res.status(200).json(reuslt);

@@ -1,12 +1,12 @@
 <div class="cart">
-    <img src="/assets/img/korzina.png">
+    <img style="width:39px" src="/assets/img/korzina.png">
         <span *ngIf="cart.itemCount > 0">
-         Количество товаров: {{ cart.itemCount }}
-          Сумма :
-        {{ cart.cartPrice | currency:"USD":true:"2.2-2" }}
+            Number of goods: {{ cart.itemCount }}
+          Sum :
+        {{ cart.cartPrice | currency:"₴":true:"2.2-2" }}
        </span>
-        <span *ngIf="cart.itemCount == 0"> Количество товаров: (0) </span>
-    <button mat-button [disabled]="cart.itemCount == 0" routerLink="/cart"> Оформить заказа</button>
+        <span *ngIf="cart.itemCount == 0"> Number of goods: (0) </span>
+    <button mat-button [disabled]="cart.itemCount == 0" routerLink="/cart"> Checkout</button>
 </div>
 
 
