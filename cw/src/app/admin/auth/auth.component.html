@@ -56,7 +56,7 @@
                                    value="" required name="number">
                             <mat-error *ngIf="inputNumber.invalid">{{getErrorRequired()}}</mat-error>
                         </mat-form-field>
-                        <button mat-raised-button color="warn" class="buton-registr" (click)="saveUser()">Зарегистрироваться</button>
+                        <button mat-raised-button color="warn" class="buton-registr" (click)="saveUser()">Sign Up</button>
                     </form>
 
                 </mat-card>
@@ -80,7 +80,7 @@
                             </mat-icon>
                             <mat-error *ngIf="inputPasswordAutoriz.invalid">{{getErrorPassword()}}</mat-error>
                         </mat-form-field>
-                        <button mat-raised-button  class="buton-enterence" (click)="enterenseUser()" color="primary">Enter</button>
+                        <button mat-raised-button  class="buton-enterence" (click)="enterenseUser()" color="primary">Log in</button>
                     </form>
                 </mat-card>
             </mat-tab>

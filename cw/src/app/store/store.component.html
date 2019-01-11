@@ -52,7 +52,7 @@
                                 <p>Description: {{productItem.description}}</p>
                             </div>
                         </div>
-                        <button mat-button class="list-item_button">Add to Cart</button>
+                        <button mat-button class="list-item_button" (click)="addProductToCart(productItem)">Add to Cart</button>
                     <!--<button mat-button class="list-item_button" (click)="openDialog(productItem)" > Подробнее </button>-->
                     </div>
                 </div>
