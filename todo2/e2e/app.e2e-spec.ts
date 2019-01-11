@@ -1,6 +1,6 @@
 import { TodoPage } from './app.po';
 
-describe('todo App', () => {
+describe('todo App', function() {
   let page: TodoPage;
 
   beforeEach(() => {
