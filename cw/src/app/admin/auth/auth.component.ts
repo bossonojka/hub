@@ -68,8 +68,8 @@ export class AuthComponent implements OnInit {
             role: 'user'
         };
 
-        const message = this.userService.createUser(newUser);
-        this.registrValidation.open(message, 'Ok', {duration: 1000});
+        this.userService.createUser(newUser);
+        this.registrValidation.open("You are successfully registered.", '', {duration: 3000});
     }
 
 

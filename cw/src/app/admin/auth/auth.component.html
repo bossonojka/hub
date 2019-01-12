@@ -13,7 +13,7 @@
                         </mat-form-field>
 
                         <mat-form-field class="autoriz-fild">
-                            <input matInput [formControl]="inputPassword" name="password" required minlength="6"
+                            <input value="" matInput [formControl]="inputPassword" name="password" required minlength="6"
                                    placeholder="Password"
                                    [type]="hide ? 'password' : 'text'">
                             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
@@ -56,7 +56,7 @@
                                    value="" required name="number">
                             <mat-error *ngIf="inputNumber.invalid">{{getErrorRequired()}}</mat-error>
                         </mat-form-field>
-                        <button mat-raised-button color="warn" class="buton-registr" (click)="saveUser()">Sign Up</button>
+                        <button mat-raised-button color="accent" class="buton-registr" (click)="saveUser()">Sign Up</button>
                     </form>
 
                 </mat-card>
@@ -73,7 +73,7 @@
                         </mat-form-field>
 
                         <mat-form-field class="autoriz-fild">
-                            <input matInput [formControl]="inputPasswordAutoriz" name="password" required minlength="6"
+                            <input matInput value="" [formControl]="inputPasswordAutoriz" name="password" required minlength="6"
                                    placeholder="Password"
                                    [type]="hide ? 'password' : 'text'">
                             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}

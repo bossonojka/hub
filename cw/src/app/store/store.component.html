@@ -1,5 +1,22 @@
 <app-slider-store></app-slider-store>
 
+<div class="best-product2">
+    <div class="wrapper2">
+        <h2>Top Price</h2>
+        <div class="img2">
+            <img src="{{BestProduct[0].url}}">
+            <div class="price-box"><s>{{(BestProduct[0].price + 458) + "₴"}}</s>{{"   " + BestProduct[0].price + "₴"}}</div> 
+        </div>
+        <div class="info2">
+            <p><b>Name:</b> {{BestProduct[0].name}}</p>
+            <p><b>Type:</b> {{BestProduct[0].type}}</p>
+            <p><b>Description:</b> {{BestProduct[0].description}}</p>
+            <p><b>Specification:</b> {{BestProduct[0].specifications}}</p>
+            <button class="btn-top" (click)="addProductToCart(BestProduct[0])">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
 <div class="best-product">
     <div class="wrapper">
         <h2>Best Deal</h2>
