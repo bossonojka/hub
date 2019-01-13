@@ -42,9 +42,11 @@ export class CartDetailComponent implements OnInit {
             user: this.registUser,
         };
         this.orderService.addOrder(order);
+        //alert("Your order has been accepted.");
         this.checkoutValidation.open("Your order has been accepted.", '', {duration: 3000});
-        setTimeout(function(){
+        document.location.reload();
+        /*setTimeout(function(){
             document.location.reload();
-        },1000)
+        },1000)*/
     }
 }

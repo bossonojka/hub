@@ -5,7 +5,6 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {MatDialog, MatSnackBar} from '@angular/material';
 import {UserService} from '../../model/user.service';
 import {NgForm} from '@angular/forms';
-import { setTimeout } from 'timers';
 
 @Component({
     selector: 'app-user-editor',
