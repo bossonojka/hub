@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {DatasourseService} from '../../model/datasourse.service';
 import {Cart} from '../../model/cart.model';
 import {Router} from '@angular/router';
-import {MatDialog} from '@angular/material';
+import {MatDialog, MatSnackBar} from '@angular/material';
 import {UserService} from '../../model/user.service';
 import {OrderService} from '../../model/ordersourse.service';
 import {Product} from '../../model/product.model';
@@ -17,7 +17,7 @@ export class OrderTableComponent implements OnInit {
     private myOrders;
 
     constructor(private data: DatasourseService, private  cart: Cart,
-                private route: Router, public orderService: OrderService) {
+                private route: Router, public orderService: OrderService, public orderValidation: MatSnackBar) {
     }
 
     ngOnInit() {
@@ -27,7 +27,7 @@ export class OrderTableComponent implements OnInit {
     deleteOrder(id, order) {
         if (id !== null) {
             this.orderService.deleteOrder(id);
-            alert('Order has been deleted, update data.');
+            //this.orderValidation.open("Order has been deleted, update data.", '', {duration: 3000});
         }
         else {
             const changeOrder = {

@@ -5,6 +5,7 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {MatDialog, MatSnackBar} from '@angular/material';
 import {UserService} from '../../model/user.service';
 import {NgForm} from '@angular/forms';
+import { setTimeout } from 'timers';
 
 @Component({
     selector: 'app-user-editor',
@@ -78,7 +79,7 @@ export class UserEditorComponent implements OnInit {
                 role: form.value.role,
             };
             this.userService.upgradeUser(editUser);
-            alert('User has been changed, go back and update data.');
+            //alert('User has been changed, go back and update data.');
             this.route.navigateByUrl('/admin/main/users');
         }
     }

@@ -239,7 +239,7 @@ a:after {
     margin-left:-150px;
     padding:10px;
     background: #ebebeb;
-    border: orange 2px solid;
+    border: rgb(255, 203, 107) 10px solid;
     width: 400px;
     height:400px;
     color: #616161;;
@@ -254,7 +254,7 @@ a:after {
     right: 40px;
     bottom:40px;
     z-index:9999;
-    width:400px;
+    width:600px;
   }
   
   .poster1:hover .descr{
@@ -263,7 +263,7 @@ a:after {
     right: 40px;
     bottom:40px;
     z-index:9999;
-    width:400px;
+    width:600px;
   }
 
 

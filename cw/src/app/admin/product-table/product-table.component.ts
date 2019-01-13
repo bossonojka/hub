@@ -30,7 +30,7 @@ export class ProductTableComponent implements OnInit {
 
     deleteProduct(id) {
         this.data.deleteProduct(id);
-        alert('Item was deleted, update data.');
+        //alert('Item was deleted, update data.');
     }
 
     updateAll() {

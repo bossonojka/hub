@@ -4,6 +4,7 @@ import {UserService} from '../../model/user.service';
 import {Router} from '@angular/router';
 import {OrderService} from '../../model/ordersourse.service';
 import {User} from '../../model/user.model';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
     selector: 'app-cart-detail',
@@ -14,7 +15,7 @@ export class CartDetailComponent implements OnInit {
 
     public myUser;
 
-    constructor(public cart: Cart, public user: UserService, public router: Router, public orderService: OrderService) {
+    constructor(public cart: Cart, public user: UserService, public router: Router, public orderService: OrderService, public  checkoutValidation: MatSnackBar) {
     }
 
     ngOnInit() {
@@ -41,6 +42,9 @@ export class CartDetailComponent implements OnInit {
             user: this.registUser,
         };
         this.orderService.addOrder(order);
-        alert('Заказ был принят');
+        this.checkoutValidation.open("Your order has been accepted.", '', {duration: 3000});
+        setTimeout(function(){
+            document.location.reload();
+        },1000)
     }
 }

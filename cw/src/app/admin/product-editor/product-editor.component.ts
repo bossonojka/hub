@@ -64,7 +64,7 @@ export class ProductEditorComponent implements OnInit {
                 url: this.wayImg
             };
             this.data.addProduct(newProduct);
-            alert('This product has been added, go back and update the data.');
+            //alert('This product has been added, go back and update the data.');
             this.route.navigateByUrl('/admin/main/products');
         }
         if (this.mode === 'edit') {
@@ -80,7 +80,7 @@ export class ProductEditorComponent implements OnInit {
                 url: this.wayImg
             };
             this.data.upgradeProduct(editProduct);
-            alert('The product has been changed, go back and update the data.');
+            //alert('The product has been changed, go back and update the data.');
             this.route.navigateByUrl('/admin/main/products');
         }
     }

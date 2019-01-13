@@ -27,10 +27,11 @@
                 <div class="best-product__button">
                     <div class="poster">Show Info
                         <div class="descr">
-                            <p>Manufacturer: {{bestproduct.manufacturer}}</p>
-                            <p>Price: {{"₴" + bestproduct.price}}</p>
-                            <p>Type: {{bestproduct.type}}</p>
-                            <p>Description: {{bestproduct.description}}</p>
+                            <p><b>Manufacturer: </b>{{bestproduct.manufacturer}}</p>
+                            <p><b>Price: </b>{{"₴" + bestproduct.price}}</p>
+                            <p><b>Type: </b>{{bestproduct.type}}</p>
+                            <p><b>Specification: </b>{{bestproduct.specifications}}</p>
+                            <p><b>Description: </b>{{bestproduct.description}}</p>
                         </div>
                     </div>
                     <button mat-button class="list-item_button btn-best" (click)="addProductToCart(bestproduct)">Add to Cart</button>
@@ -63,10 +64,11 @@
                         <span class="list-item_price"> {{ "₴" + productItem.price}} </span><br>
                         <div class="poster">Show Info
                             <div class="descr">
-                                <p>Manufacturer: {{productItem.manufacturer}}</p>
-                                <p>Price: {{"₴" + productItem.price}}</p>
-                                <p>Type: {{productItem.type}}</p>
-                                <p>Description: {{productItem.description}}</p>
+                                <p><b>Manufacturer: </b>{{productItem.manufacturer}}</p>
+                                <p><b>Price: </b>{{"₴" + productItem.price}}</p>
+                                <p><b>Type: </b>{{productItem.type}}</p>
+                                <p><b>Specification: </b>{{productItem.specifications}}</p>
+                                <p><b>Description: </b>{{productItem.description}}</p>
                             </div>
                         </div>
                         <button mat-button class="list-item_button" (click)="addProductToCart(productItem)">Add to Cart</button>
