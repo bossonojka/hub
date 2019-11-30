@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+td input[type="submit"] {
+	width: 100%;
+}
+.id{
+	text-align: center;
+}
+.navigator, table{
+	margin-bottom: 10px;
+}
+
+body > form{
+	margin-bottom: 10px;
+}
+
+span.error {
+	color: red;
+}
+
+span.success {
+	color: green;
+}
+
+p {
+	margin: 0;
+}
