@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <script>
+    function mySplit(str, separator){
+      let array = [];
+      let index = 0;
+      while ((index = str.indexOf(separator)) !== -1){
+        array.push(str.slice(0, index));
+        str = str.slice(index + 1, str.length);
+        continue;
+      }
+      if (str){
+        array.push(str);
+      }
+      return array;
+    }
+  </script>
+</body>
+</html>
