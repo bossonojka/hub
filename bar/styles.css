@@ -1,0 +1,20 @@
+.wrapper{
+
+}
+
+.backgroud{
+    height: 50px;
+    background-color: rgb(52, 140, 223);
+}
+
+.bar{
+    height: inherit;
+    background-color: rgb(230, 162, 36);
+    width: 0;
+}
+
+@media(min-width: 30em){
+    body{
+        background-color: seagreen;
+    }
+}
