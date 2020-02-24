@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        html {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        height: 100%;
+        }
+
+        body {
+        overflow: hidden;
+        height: inherit;
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        let canvas = document.querySelector("canvas");
+        let ctx = canvas.getContext("2d");
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+        
+        window.onresize = function(e){
+            width = canvas.width = e.target.innerWidth;
+            height = canvas.height = e.target.innerHeight;
+        }
+
+        function Ball(x, y, velX, velY, color, r){
+            this.x = x;
+            this.y = y;
+            this.velX = velX;
+            this.velY = velY;
+            this.color = color;
+            this.r = r;
+        }
+
+        Ball.prototype.draw = function(){
+            ctx.beginPath();
+            ctx.fillStyle = this.color;
+            ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+
+        Ball.prototype.update = function(){
+            if ((this.x + this.r) >= width){
+                this.velX = -(this.velX);
+            }
+
+            if ((this.x - this.r) <= 0){
+                this.velX = -(this.velX);
+            }
+
+            if ((this.y + this.r) >= height){
+                this.velY = -(this.velY);
+            }
+
+            if ((this.y - this.r) <= 0){
+                this.velY = -(this.velY);
+            }
+
+            this.x += this.velX;
+            this.y += this.velY;
+        }
+
+        let balls = [];
+
+        function random(min, max){
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function populate(){
+            while(balls.length < 25){
+                let r = random(20, 30);
+                balls.push(new Ball(random(0 + r, width - r), random(0 + r, height - r), random(-4, 4), random(-4, 4), 'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')', r));
+            }
+
+            loop();
+        }
+
+        function loop(){
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+            ctx.fillRect(0, 0, width, height);
+
+            for (const ball of balls) {
+                ball.draw();
+                ball.update();
+            }
+
+            requestAnimationFrame(loop);
+        }
+
+        populate();
+    </script>
+</body>
+</html>
